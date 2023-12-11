@@ -5,10 +5,9 @@ Sistema de suporte ao ensino
 
 ### Environment configuration
 ```
-python3 -m pip install virtualenvwrapper
-#Follow further configuration instructions before running the next command: https://virtualenvwrapper.readthedocs.io/en/latest/install.html
-mkvirtualenv sisen-venv
 cd sisen/server
+python3 -m venv venv
+source venv/scripts/activate
 pip install -r requirements.txt
 python manage.py migrate
 ```
@@ -16,7 +15,6 @@ python manage.py migrate
 ### Steps to run
 ```
 cd sisen/server
-workon sisen-venv
 python manage.py runserver
 ```
 
