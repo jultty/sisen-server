@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'yn0@+&mjcn7jic#)^ijx-)cijo&v8+pn1z-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.94.120.131']
 
 
 # Application definition
@@ -125,7 +125,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#local url
 CLIENT_RESET_PASSWORD_CONFIRMATION_URL = 'http://localhost:8080/#/password-reset-confirmation'
+
+# prod url
+CLIENT_RESET_PASSWORD_CONFIRMATION_URL = 'http://sisen.vercel.app/#/password-reset-confirmation'
 DJANGO_REST_MULTITOKENAUTH_RESET_TOKEN_EXPIRY_TIME = 2 #hours
 DJANGO_REST_PASSWORDRESET_NO_INFORMATION_LEAKAGE = True
 
@@ -154,5 +158,6 @@ JWT_AUTH = {
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:8080",
-    "http://127.0.0.1:8080"
+    "http://127.0.0.1:8080",
+    "http://sisen.vercel.app"
 ]
