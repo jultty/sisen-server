@@ -51,7 +51,6 @@ Invalid HTTP_HOST header: 'localhost:8000'. You may need to add 'localhost' to A
 Bad Request: /api/v1/auth
 [19/Dec/2023 21:33:50] "POST /api/v1/auth HTTP/1.1" 400 73966
 ```
-]
 
 O erro informa que o endereço `localhost` (`127.0.0.1`) não é um dos endereços configurados como permitidos na variável `ALLOWED_HOSTS`.
 
@@ -85,4 +84,4 @@ npm install
 npx au run watch
 ```
 
-Conforme o relatório de instalação disponível no Classroom, ocorreu o erro `ERR_OSSL_EVP_UNSUPPORTED`, resolvido com `export NODE_OPTIONS=--openssl-legacy-provider`.
+Conforme o relatório de instalação no Windows, ocorreu o erro `ERR_OSSL_EVP_UNSUPPORTED`, resolvido com `export NODE_OPTIONS=--openssl-legacy-provider`.
